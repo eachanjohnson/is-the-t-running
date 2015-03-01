@@ -1,0 +1,142 @@
+/*
+Is the T running CSS
+*/
+
+* {
+    position: relative;
+    padding: 0px;
+    margin: 0px;
+    border: 0px;
+}
+
+html, body {
+    width: 100vw;
+}
+
+html {
+    height: 100%;
+}
+
+
+/* Fonts */
+h1, h2, h3 {
+    font-family: serif;
+    color: #000000;
+    text-align: center;
+}
+
+h1 {
+    font-size: 15vmin;
+}
+
+h1 span {
+    font-size: 7vmin;
+}
+
+.answer {
+    padding-top: 20vh;
+}
+
+.answer h2 {
+    font-size: 20vmin;
+}
+
+p {
+    font-family: serif;
+    color: #000000;
+}
+
+/* Layout */
+.one-page {
+    position: absolute;
+    width: 100vw;
+    height: 100vh;
+    overflow: hidden;
+}
+
+.two-columns {
+    position: absolute;
+    width: 50vw;
+    height: 100vw;
+    top: 0vh;
+}
+
+.page-title {
+    top: 2.1vh;
+    left: 2.1vw;
+}
+
+.section-title {
+    position: relative;
+    top: 4.2vh;
+    left: 2.1vw;
+    font-size: 5vmin;
+}
+
+.section-text {
+    position: relative;
+    top: 8.3vh;
+    left: 4.1vw;
+    font-size: 3vmin;
+}
+
+.col1 {
+    left: 0vw;
+    border-right: 1px dotted #000000;
+    height: 100%;
+}
+
+.col2 {
+    left: 50vw;
+    height: 100%;
+}
+
+.spacer-half {
+    height: 16.6%;
+    width: 100%;
+    background-color: transparent;
+}
+
+.two-by-two-container {
+    width: 83%;
+    height: 83vh;
+}
+
+.two-by-two {
+    position: absolute;
+    width: 50%;
+    height: 50%;
+}
+
+.two-by-two-container .c11 {
+    top: 0%;
+    left: 0%;
+}
+
+.two-by-two-container .c12 {
+    top: 0%;
+    left: 50%;
+}
+
+.two-by-two-container .c21 {
+    top: 50%;
+    left: 0%;
+}
+
+.two-by-two-container .c22 {
+    top: 50%;
+    left: 50%;
+}
+
+.two-by-two-container h3 {
+    text-align: center;
+}
+
+/* Footer */
+footer {
+    position: fixed;
+    bottom: 0vh;
+    left: 0vw;
+    height: 2.1vh;
+    width: 100vw;
+}
