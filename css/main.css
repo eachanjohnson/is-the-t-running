@@ -29,6 +29,10 @@ h1 {
     font-size: 15vmin;
 }
 
+h1 {
+    padding-top: 5vh;
+}
+
 h1 span {
     font-size: 7vmin;
 }
@@ -38,7 +42,7 @@ h1 span {
 }
 
 .answer h2 {
-    font-size: 20vmin;
+    font-size: 30vmin;
 }
 
 p {
@@ -136,7 +140,16 @@ p {
 footer {
     position: fixed;
     bottom: 0vh;
-    left: 0vw;
-    height: 2.1vh;
+    left: 1vw;
+    height: 5vmin;
     width: 100vw;
+    font-size: 3vmin;
+}
+
+footer a {
+    color: #000000;
+}
+
+footer a:hover {
+    text-decoration: none;
 }
