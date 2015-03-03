@@ -1,7 +1,8 @@
 //// IS THE T RUNNING JS
 function alertsCallback (data) {
      var d = data.alerts,
-         counter = 0;
+         counter = 0,
+         html = '<div class="delayed-services">';
 
     for ( var i = 0; i < d.length; i++ ) {
         //console.log( '-------' );
@@ -14,7 +15,13 @@ function alertsCallback (data) {
             if ( life === 'New' || life === 'Ongoing' ) {
                 for ( var j = 0; j < services.length; j++ ) {
                     if ( services[j].mode_name === 'Subway' ) {
+                        var color = services[j].route_name.split(' Line')[0],
+                            severity = d[i].severity;
+
+                        html += '<div class="' + color + '">' +
+                            services[j].route_name + ' ' + name + ' ' + severity + '<br>';
                         counter++;
+
                     } else {
                         //console.log(services[j].mode_name);
                     }
@@ -27,9 +34,11 @@ function alertsCallback (data) {
         }
     }
 
-    console.log(counter);
+    console.log(html);
+    $('.placeholder').addClass('answer');
     if ( counter > 0 ) {
-        $('.answer h2').text('No.');
+        var delays = composeDelays(services);
+        $('.answer h2').text('No.<br>' + html + '</div>');
     } else {
         $('.answer h2').text('Yes.');
     }
