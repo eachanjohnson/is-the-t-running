@@ -17,12 +17,15 @@ html {
     height: 100%;
 }
 
-
 /* Fonts */
 h1, h2, h3 {
     font-family: serif;
     color: #000000;
     text-align: center;
+}
+
+p {
+    font-family: serif;
 }
 
 h1 {
@@ -39,7 +42,7 @@ h1 span {
 
 .placeholder {
     position: relative;
-    top: 16.6vh;
+    top: 12.2vh;
 }
 
 .placeholder h2 {
@@ -48,33 +51,35 @@ h1 span {
 
 .answer {
     position: relative;
-    top: 16.6vh;
+    top: 12.2vh;
 }
 
 .answer h2 {
     font-size: 30vmin;
 }
 
-.delayed-services .red {
-    color: 'red';
+.delayed-services {
+    width: 100vw;
+    text-align: center;
+    font-size: 4vmin;
 }
 
-.delayed-services .green {
-    color: 'green';
+.red {
+    color: '#ff0000';
 }
 
-.delayed-services .orange {
-    color: 'orange';
+.green {
+    color: '#008000';
 }
 
-.delayed-services .blue {
-    color: 'blue';
+.orange {
+    color: '#ffa500';
 }
 
-p {
-    font-family: serif;
-    color: #000000;
+.blue {
+    color: '#00f000';
 }
+
 
 /* Layout */
 .one-page {
