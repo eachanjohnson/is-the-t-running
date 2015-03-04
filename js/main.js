@@ -1,4 +1,19 @@
 //// IS THE T RUNNING JS
+function countDown () {
+    var $countdown = $('.countdown p'),
+        $text = parseInt($countdown.text());
+    console.log($text);
+
+    if ( $text > 0 ) {
+        var newNumber = $text - 1;
+        $countdown.text(newNumber.toString());
+        setTimeout(countDown, 1000);
+    } else {
+        $countdown.text('60');
+        getAnswer();
+    }
+}
+
 function alertsCallback (data) {
      var d = data.alerts,
          counter = 0,
@@ -56,19 +71,21 @@ function getAnswer () {
     $placeholder.removeClass('.answer');
     $placeholder.text('');
     $('.placeholder').append('<h2>Finding out...</h2>');
-    $.getJSON('http://realtime.mbta.com/developer/api/v2/alerts', {
+    var getJson = $.getJSON('http://realtime.mbta.com/developer/api/v2/alerts', {
         api_key: 'wX9NwuHnZU2ToO7GmGR9uw',
         format: 'json'
     })
         .done( function (data) {
             alertsCallback(data);
         });
+    getJson.complete( function () {
+        countDown();
+    });
 }
 
 //// Main function
 function main () {
-    getAnswer();
-    setTimeout(getAnswer, 180000);
+    countDown();
 }
 
 //// Run on document load

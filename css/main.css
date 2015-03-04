@@ -79,6 +79,12 @@ h1 span {
 .blue {
     color: '#00f000';
 }
+.countdown {
+    position: fixed;
+    top: 0vh;
+    right:0vw;
+    font-size: 10vmin;
+}
 
 
 /* Layout */
