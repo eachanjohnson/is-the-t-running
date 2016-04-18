@@ -111,6 +111,17 @@ function main () {
     
     countDown($countdown);
     
+    $('.twitter-handle').click(
+        function () {
+            
+            var baseUrl = 'http://twitter.com/intent/follow',
+                screenNameValue = 'eachanjohnson',
+                url = encodeURI(baseUrl) + '?screen_name=' + encodeURIComponent(screenNameValue); 
+            
+            window.open(url);
+        }
+    );
+    
     $('.tweet-button').click(
         function () {
             
