@@ -110,6 +110,22 @@ function main () {
     var $countdown = $('.countdown p');
     
     countDown($countdown);
+    
+    $('.tweet-button').click(
+        function () {
+            
+            var baseUrl = 'http://twitter.com/intent/tweet',
+                textValue = 'I just found out if the T is delayed!',
+                urlValue = 'http://eachanjohnson.com/is-the-t-running',
+                hashtagsValue = 'mbta',
+                relatedValue = 'eachanjohnson',
+                url = encodeURI(baseUrl) + '?text=' +encodeURIComponent(textValue) + '&url=' +
+                    encodeURIComponent(urlValue) + '&hashtags=' + encodeURIComponent(hashtagsValue) +
+                    '&related=' + encodeURIComponent(relatedValue);
+            
+            window.open(url);
+        }
+    );
 }
 
 // Run on document load
