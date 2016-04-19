@@ -71,12 +71,12 @@ function alertsCallback (data) {
     
     if ( counter > 0 ) {  // if there are delays
         
-        $('.answer h2').text('No.')
+        $('.answer h2').text('Yes.')
         $('.answer').append(html);
     
     } else {
         
-        $('.answer h2').text('Yes.');
+        $('.answer h2').text('No.');
     
     }
 }
@@ -127,7 +127,7 @@ function main () {
             
             var baseUrl = 'http://twitter.com/intent/tweet',
                 textValue = 'I just found out if the T is delayed!',
-                urlValue = 'http://eachanjohnson.com/is-the-t-running',
+                urlValue = 'http://isthetdelayed.com',
                 hashtagsValue = 'mbta',
                 relatedValue = 'eachanjohnson',
                 url = encodeURI(baseUrl) + '?text=' +encodeURIComponent(textValue) + '&url=' +
