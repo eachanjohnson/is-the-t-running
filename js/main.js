@@ -107,36 +107,22 @@ function main () {
     
     // Main function
     
-    var $countdown = $('.countdown p');
-    
+    var $countdown = $('.countdown p'),
+        baseUrl = 'http://twitter.com/intent/',
+        screenNameValue = 'eachanjohnson',
+        screenNameUrl = encodeURI(baseUrl) + 'follow?screen_name=' + encodeURIComponent(screenNameValue),
+        textValue = 'I just found out if the T is delayed!',
+        urlValue = 'http://isthetdelayed.com',
+        hashtagsValue = 'mbta',
+        relatedValue = 'eachanjohnson',
+        tweetUrl = encodeURI(baseUrl) + 'tweet?text=' + encodeURIComponent(textValue) + '&url=' +
+            encodeURIComponent(urlValue) + '&hashtags=' + encodeURIComponent(hashtagsValue) +
+            '&related=' + encodeURIComponent(relatedValue);
+
     countDown($countdown);
     
-    $('.twitter-handle').click(
-        function () {
-            
-            var baseUrl = 'http://twitter.com/intent/follow',
-                screenNameValue = 'eachanjohnson',
-                url = encodeURI(baseUrl) + '?screen_name=' + encodeURIComponent(screenNameValue); 
-            
-            window.open(url);
-        }
-    );
-    
-    $('.tweet-button').click(
-        function () {
-            
-            var baseUrl = 'http://twitter.com/intent/tweet',
-                textValue = 'I just found out if the T is delayed!',
-                urlValue = 'http://isthetdelayed.com',
-                hashtagsValue = 'mbta',
-                relatedValue = 'eachanjohnson',
-                url = encodeURI(baseUrl) + '?text=' +encodeURIComponent(textValue) + '&url=' +
-                    encodeURIComponent(urlValue) + '&hashtags=' + encodeURIComponent(hashtagsValue) +
-                    '&related=' + encodeURIComponent(relatedValue);
-            
-            window.open(url);
-        }
-    );
+    $('.twitter-handle').attr('href', screenNameUrl);
+    $('.tweet-button').attr('href', tweetUrl);
 }
 
 // Run on document load
